@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشهادة الصحية</title>
+    <link rel="stylesheet" href="https://baladyservices.website/files/css/bootstrap.min.css">
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+        
+        #preloader img {
+            width: 200px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .header-container, .footer-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .header-image, .footer-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        @supports not (object-fit: cover) {
+            .header-container {
+                background: url('https://i.ibb.co/B2QJ9Wjh/Picsart-25-02-15-21-41-35-339.jpg') center/cover no-repeat;
+                height: 300px;
+            }
+            .footer-container {
+                background: url('https://i.ibb.co/35p6wT0d/Picsart-25-02-15-22-53-28-750.jpg') center/cover no-repeat;
+                height: 200px;
+            }
+            .header-image, .footer-image {
+                display: none;
+            }
+        }
+        #profileImage {
+            width: 160px;
+            height: 210px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            .header-image { max-height: 250px; }
+            .footer-image { max-height: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <img src="https://apps.balady.gov.sa/BALADYCDN/Content//images/logo.svg" alt="شعار التحميل">
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('preloader').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('preloader').remove();
+            }, 500);
+        }, 7000);
+    </script>
+
+    <a href="https://balady.gov.sa/themes/custom/balady_new/logo.svg" target="_blank">
+        <div class="header-container">
+            <img src="https://i.ibb.co/B2QJ9Wjh/Picsart-25-02-15-21-41-35-339.jpg" 
+                 class="header-image"
+                 alt="رأس الصفحة">
+        </div>
+    </a>
+
+    <div class="container">
+        <div class="card p-lg-4">
+            <div class="card-body">
+                <h2 class="text-center mb-4" style="font-size:24px; font-weight:bold">
+                    شهادة صحية سنوية
+                </h2>
+                
+                <div class="text-center mb-4">
+                    <img src="data:image/jpeg;base64,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" 
+                         id="profileImage"
+                         alt="صورة شخصية">
+                </div>
+
+                <div class="row">
+                    
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="امانة منطقة القصيم" readonly>
+                                    <span>الامانة</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="بلدية بريده" readonly>
+                                    <span>البلدية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="محمد احمد محمد قايد الصانع" readonly>
+                                    <span>الاسم</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="2468915133" readonly>
+                                    <span>رقم الهوية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="ذكر" readonly>
+                                    <span>الجنس</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="اليمن" readonly>
+                                    <span>الجنسية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="407760023195" readonly>
+                                    <span>رقم الشهادة الصحية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="عامل عادي" readonly>
+                                    <span>المهنة</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="2025\03\29" readonly>
+                                    <span>تاريخ الإصدار (ميلادي)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="1446\09\29" readonly>
+                                    <span>تاريخ الإصدار (هجري)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="2026\03\29" readonly>
+                                    <span>تاريخ الانتهاء (ميلادي)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="1447\09\29" readonly>
+                                    <span>تاريخ الانتهاء (هجري)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="" readonly>
+                                    <span>نوع البرنامج التثقيفي</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="1449\09\29" readonly>
+                                    <span>تاريخ انتهاء البرنامج</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="" readonly>
+                                    <span>رقم الرخصة</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="ليان للتجارة" readonly>
+                                    <span>اسم المنشأة</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" value="" readonly>
+                                    <span>رقم المنشأة</span>
+                                </div>
+                            </div>
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://balady.gov.sa/themes/custom/balady_new/logo.svg" target="_blank">
+        <div class="footer-container">
+            <img src="https://i.ibb.co/35p6wT0d/Picsart-25-02-15-22-53-28-750.jpg" 
+                 class="footer-image"
+                 alt="ذيل الصفحة">
+        </div>
+    </a>
+</body>
+</html>
+            
